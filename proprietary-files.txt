@@ -72,12 +72,15 @@ vendor/bin/hw/vtservice_hidl
 vendor/bin/mtk_pkm_service
 vendor/bin/muxreport
 vendor/bin/volte_imcb
+vendor/bin/volte_imcb.angelicain
 vendor/bin/volte_imcb.mt6765
 vendor/bin/volte_imsm_93
 vendor/bin/volte_md_status
 vendor/bin/volte_stack
+vendor/bin/volte_stack.angelicain
 vendor/bin/volte_stack.mt6765
 vendor/bin/volte_ua
+vendor/bin/volte_ua.angelicain
 vendor/bin/volte_ua.mt6765
 vendor/bin/wfca
 vendor/etc/init/dmc_core.rc
