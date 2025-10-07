@@ -139,6 +139,7 @@ ro.lmk.lowmem_min_oom_score=851
 ro.logd.kernel=false
 
 # Media
+debug.stagefright.ccodec=1
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.vendor.mtk_config_max_dram_size=0x800000000
 vendor.mtk.vdec.waitkeyframeforplay=9
