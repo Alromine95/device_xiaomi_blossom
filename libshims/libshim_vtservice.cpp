@@ -63,4 +63,3 @@ void _ZN7android10MediaMuxerC1EiNS0_12OutputFormatE(
   _ZN7android10MediaMuxerC1EiNS_14MediaMuxerBase12OutputFormatE(thisptr, fd,format);
 }
 }
-
