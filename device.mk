@@ -7,6 +7,12 @@
 # Enable userspace reboot
 $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 
+#Disable VINTF kernel enforcement and override kernel version
+PRODUCT_ENFORCE_VINTF_MANIFEST := false
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+PRODUCT PROPERTY OVERRIDES += \
+    ro.kernel.version-4.19.191
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -474,8 +480,7 @@ PRODUCT_PACKAGES += \
     libshim_audio \
     libshim_beanpod \
     libshim_sensors \
-    libshim_ui \
-    libshim_vtservice
+    libshim_ui
 
 # Cgroup
 PRODUCT_COPY_FILES += \
