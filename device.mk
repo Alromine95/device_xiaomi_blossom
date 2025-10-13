@@ -53,11 +53,6 @@ PRODUCT_AAPT_CONFIG := xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi
 
-# GMS
-ifeq ($(WITH_GMS),true)
-GMS_MAKEFILE=gms_minimal.mk
-endif
-
 # HACK: Avoid usb crash
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
     persist.adb.nonblocking_ffs=0 \
@@ -274,10 +269,10 @@ PRODUCT_PACKAGES += \
     libutilscallstack.vendor
 
 # Viper4fx
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+#$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # BCR
-$(call inherit-product, vendor/bcr/bcr.mk)
+#$(call inherit-product, vendor/bcr/bcr.mk)
 
 # Media
 PRODUCT_PACKAGES += \
@@ -393,10 +388,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/blossom/proprietary/vendor/firmware/novatek_ts_hlt_mp.bin:recovery/root/vendor/firmware/novatek_ts_hlt_mp.bin \
     vendor/xiaomi/blossom/proprietary/vendor/firmware/novatek_ts_truly_fw.bin:recovery/root/vendor/firmware/novatek_ts_truly_fw.bin \
     vendor/xiaomi/blossom/proprietary/vendor/firmware/novatek_ts_truly_mp.bin:recovery/root/vendor/firmware/novatek_ts_truly_mp.bin
-
-# FM Radio
-PRODUCT_PACKAGES += \
-    RevampedFMRadio
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -537,3 +528,6 @@ PRODUCT_PACKAGES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/blossom/blossom-vendor.mk)
+
+#Miui
+$(call inherit-product, vendor/xiaomi/miuicamera/MiuiCamera.mk)
