@@ -1,0 +1,85 @@
+From f2b6a96ff419461d3795168284568d0107ae0d66 Mon Sep 17 00:00:00 2001
+From: HaiKito18 <haininhquang3@gmail.com>
+Date: Fri, 17 Oct 2025 16:26:31 +0000
+Subject: [PATCH] kill some nerver allow rules for volte and thermal
+
+Change-Id: I90c5f9187e9d8308cf133e72515970dd77a01b88
+---
+ private/domain.te   |  8 ++++----
+ private/property.te | 20 ++++++++++----------
+ 2 files changed, 14 insertions(+), 14 deletions(-)
+
+diff --git a/private/domain.te b/private/domain.te
+index 42c53377e..1ef7baec7 100644
+--- a/private/domain.te
++++ b/private/domain.te
+@@ -753,10 +753,10 @@ neverallow {
+ neverallow { domain -kernel with_asan(`-asan_extract') userdebug_or_eng(`-overlay_remounter') } { system_file_type vendor_file_type exec_type }:dir_file_class_set relabelto;
+ 
+ # Don't allow mounting on top of /system files or directories
+-neverallow {
+-  domain
+-  userdebug_or_eng(`-overlay_remounter')
+-} exec_type:dir_file_class_set mounton;
++#neverallow {
++#  domain
++#  userdebug_or_eng(`-overlay_remounter')
++#} exec_type:dir_file_class_set mounton;
+ 
+ # Nothing should be writing to files in the rootfs, except recovery.
+ neverallow { domain -recovery } rootfs:file { create write setattr relabelto append unlink link rename };
+diff --git a/private/property.te b/private/property.te
+index 2fbe4aa8c..2d8d6c386 100644
+--- a/private/property.te
++++ b/private/property.te
+@@ -165,7 +165,7 @@ typeattribute dalvik_dynamic_config_prop dalvik_config_prop_type;
+ ### Neverallow rules
+ ###
+ 
+-treble_sysprop_neverallow(`
++#treble_sysprop_neverallow(`
+ 
+ enforce_sysprop_owner(`
+   neverallow domain {
+@@ -183,10 +183,10 @@ neverallow { domain -coredomain } {
+   -system_public_property_type
+ }:file no_rw_file_perms;
+ 
+-neverallow { domain -coredomain } {
+-  system_property_type
+-  -system_public_property_type
+-}:property_service set;
++#neverallow { domain -coredomain } {
++#  system_property_type
++#  -system_public_property_type
++#}:property_service set;
+ 
+ # init is in coredomain, but should be able to read/write all props.
+ # dumpstate is also in coredomain, but should be able to read all props.
+@@ -202,7 +202,7 @@ neverallow { coredomain -init } {
+   -vendor_public_property_type
+ }:property_service set;
+ 
+-')
++#')
+ 
+ # There is no need to perform ioctl or advisory locking operations on
+ # property files. If this neverallow is being triggered, it is
+@@ -794,10 +794,10 @@ neverallow {
+   -appdomain
+ } sqlite_log_prop:file no_rw_file_perms;
+ 
+-neverallow {
+-  domain
+-  -init
+-} default_prop:property_service set;
++#neverallow {
++#  domain
++#  -init
++#} default_prop:property_service set;
+ 
+ # Only one of system_property_type and vendor_property_type can be assigned.
+ # Property types having both attributes won't be accessible from anywhere.
+-- 
+2.34.1
+
