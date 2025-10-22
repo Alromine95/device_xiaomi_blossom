@@ -131,7 +131,7 @@ PRODUCT_PACKAGES += \
     libaudioroute.vendor
 
 PRODUCT_PACKAGES += \
-    BesLoudness \
+#    BesLoudness \
     MtkInCallService
 
 PRODUCT_COPY_FILES += \
