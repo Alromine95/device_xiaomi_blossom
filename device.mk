@@ -529,6 +529,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlayBlossom \
     DialerOverlayBlossom \
     FrameworksResOverlayBlossom \
+    LauncherOverlayBlossom \
     SettingsOverlayBlossom \
     SystemUIOverlayBlossom \
     TelephonyOverlayBlossom \
