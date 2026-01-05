@@ -30,11 +30,24 @@ PRODUCT_BRAND := Redmi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+#Enable blur
 TARGET_ENABLE_BLUR := true
+
+#Quicktap
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_DISABLE_MATLOG := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
+
+#Nuke Aperture
 PRODUCT_NO_CAMERA := true
+
+#Nerver complie this
 TARGET_EXCLUDES_AUDIOFX := true
-TARGET_INCLUDE_VIA := true
-TARGET_INCLUDE_REVAMPED := true
+TARGET_INCLUDE_VIA := false
+TARGET_INCLUDE_REVAMPED := false
+
+#Mist maintainer
+MISTOS_MAINTAINER := HaiKito
+
+#Gms
+WITH_GMS := false
+TARGET_USES_MINI_GAPPS := false
+BYPASS_CHARGE_SUPPORTED := false
