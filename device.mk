@@ -91,7 +91,7 @@ PRODUCT_PACKAGES += \
     init.angelican.volte.rc \
     init.angelicain.volte.rc \
     init.cattail.volte.rc \
-    init.target.rc 
+    init.cattail.volte.rc
 
 # Recovery
 PRODUCT_PACKAGES += \
