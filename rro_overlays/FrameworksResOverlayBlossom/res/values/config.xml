@@ -656,4 +656,8 @@
     <!-- True if the device should block turning display on at boot until wallpaper is ready -->
     <bool name="config_checkWallpaperAtBoot">false</bool>
 
+    <!-- Whether WM DisplayContent supports high performance transitions
+         (lower-end devices may want to disable) -->
+    <bool name="config_deviceSupportsHighPerfTransitions">false</bool>
+
 </resources>
