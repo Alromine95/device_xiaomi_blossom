@@ -11,6 +11,12 @@ LOCAL_OVERRIDES_PACKAGES := \
     PrebuiltGmail \
     Updater \
     YouTube
+ifeq ($(BOMB_AUDIOFX),true)
+TARGET_EXCLUDES_AUDIOFX := true
+LOCAL_OVERRIDES_PACKAGES += \
+    AudioFX \
+    MusicFX
+endif
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
