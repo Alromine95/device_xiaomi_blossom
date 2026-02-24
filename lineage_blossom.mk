@@ -51,3 +51,9 @@ TARGET_INCLUDE_VIA := true
 TARGET_INCLUDE_REVAMPED := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
+
+#Overwrite build fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="blossom-user 16 BP4A.260105.004.E1 14587043 release-keys" \
+    BuildFingerprint=google/blossom/blossom:16/BP4A.260105.004.E1/14587043:user/release-keys \
+    DeviceProduct=blossom
