@@ -9,7 +9,6 @@ LOCAL_OVERRIDES_PACKAGES := \
     Gmail2 \
     Maps \
     PrebuiltGmail \
-    Updater \
     YouTube
 ifeq ($(BOMB_AUDIOFX),true)
 TARGET_EXCLUDES_AUDIOFX := true

@@ -82,3 +82,13 @@ ro.zygote.preload.enable=0
 
 # Device specific properties
 import /system/etc/properties/${ro.boot.hwname}.prop
+
+#Mist
+ro.mist.display=1600 x 720, 60 hz
+ro.mist.battery=5000mah
+ro.mist.soc=MediaTek G25/35
+ro.mist.camera=13MP + 2MP
+ro.mist.front=5MP
+ro.mist.platform=Blossom
+ro.mist.screen=Amoled 4K Utra HDR
+ro.mist.device.name=Xiaomi Blossom
