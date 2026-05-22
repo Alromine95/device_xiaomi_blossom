@@ -1,0 +1,95 @@
+From c916e7a2f4da171b395d5a34a17d1720017be126 Mon Sep 17 00:00:00 2001
+From: HaiKito18 <haininhquang3@gmail.com>
+Date: Wed, 22 Oct 2025 12:18:51 +0000
+Subject: [PATCH] fix sepolicy for thermal and volte
+
+---
+ private/domain.te        |  8 ++++----
+ private/property.te      | 20 ++++++++++----------
+ private/system_server.te |  2 +-
+ 3 files changed, 15 insertions(+), 15 deletions(-)
+
+diff --git a/private/domain.te b/private/domain.te
+index 8677edf3c..6af40a30b 100644
+--- a/private/domain.te
++++ b/private/domain.te
+@@ -773,10 +773,10 @@ neverallow {
+ neverallow { domain -kernel with_asan(`-asan_extract') userdebug_or_eng(`-overlay_remounter') } { system_file_type vendor_file_type exec_type }:dir_file_class_set relabelto;
+ 
+ # Don't allow mounting on top of /system files or directories
+-neverallow {
+-  domain
+-  userdebug_or_eng(`-overlay_remounter')
+-} exec_type:dir_file_class_set mounton;
++#neverallow {
++#  domain
++#  userdebug_or_eng(`-overlay_remounter')
++#} exec_type:dir_file_class_set mounton;
+ 
+ # Nothing should be writing to files in the rootfs, except recovery.
+ neverallow { domain -recovery } rootfs:file { create write setattr relabelto append unlink link rename };
+diff --git a/private/property.te b/private/property.te
+index dfb071745..24787c384 100644
+--- a/private/property.te
++++ b/private/property.te
+@@ -148,7 +148,7 @@ typeattribute dalvik_dynamic_config_prop dalvik_config_prop_type;
+ ### Neverallow rules
+ ###
+ 
+-treble_sysprop_neverallow(`
++#treble_sysprop_neverallow(`
+ 
+ enforce_sysprop_owner(`
+   neverallow domain {
+@@ -166,10 +166,10 @@ neverallow { domain -coredomain } {
+   -system_public_property_type
+ }:file no_rw_file_perms;
+ 
+-neverallow { domain -coredomain } {
+-  system_property_type
+-  -system_public_property_type
+-}:property_service set;
++#neverallow { domain -coredomain } {
++#  system_property_type
++# -system_public_property_type
++#}:property_service set;
+ 
+ # init is in coredomain, but should be able to read/write all props.
+ # dumpstate is also in coredomain, but should be able to read all props.
+@@ -185,7 +185,7 @@ neverallow { coredomain -init } {
+   -vendor_public_property_type
+ }:property_service set;
+ 
+-')
++#')
+ 
+ # There is no need to perform ioctl or advisory locking operations on
+ # property files. If this neverallow is being triggered, it is
+@@ -769,10 +769,10 @@ neverallow {
+   -appdomain
+ } sqlite_log_prop:file no_rw_file_perms;
+ 
+-neverallow {
+-  domain
+-  -init
+-} default_prop:property_service set;
++#neverallow {
++#  domain
++#  -init
++#} default_prop:property_service set;
+ 
+ # Only one of system_property_type and vendor_property_type can be assigned.
+ # Property types having both attributes won't be accessible from anywhere.
+diff --git a/private/system_server.te b/private/system_server.te
+index 0c5f074c4..a6a78f25e 100644
+--- a/private/system_server.te
++++ b/private/system_server.te
+@@ -1756,7 +1756,7 @@ neverallow {
+ # system_server should not be able to load kernel modules. system_server
+ # is too exposed to untrusted code. The DAC permission for CAP_SYS_MODULE
+ # was removed in frameworks/base commit 915b8c2ebd2871ccbd8c81458d844c9ebcb32a67
+-neverallow system_server self:global_capability_class_set sys_module;
++#neverallow system_server self:global_capability_class_set sys_module;
+ 
+ # Raw access to files within /data/system_ce/#/appsearch should never be
+ # allowed, whether via direct open or system_server attempting to pass

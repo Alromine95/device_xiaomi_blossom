@@ -15,6 +15,7 @@ TARGET_EXCLUDES_AUDIOFX := true
 LOCAL_OVERRIDES_PACKAGES += \
     AudioFX \
     MusicFX
+endif
 ifeq ($(WITH_GMS),true)
 LOCAL_OVERRIDES_PACKAGES := \
     Chrome \
