@@ -17,6 +17,10 @@ BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
+# OTA
+TARGET_OTA_ASSERT_DEVICE := dandelion,angelica,angelican,cattail,angelicain,blossom
+AB_OTA_UPDATER := false
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
