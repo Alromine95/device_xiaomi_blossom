@@ -18,10 +18,17 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Malloc
 PRODUCT_DISABLE_SCUDO := true
 
-scr_resolution := 720
-TARGET_SUPPORTS_BLUR := true
+# Maintainer Name
+ORION_MAINTAINER := Qbhi
+
+# Enable/Disable GApps
+ORION_GAPPS := false
+
+# Enable/Disable Blur
 TARGET_ENABLE_BLUR := true
-TARGET_BOOT_ANIMATION_RES := 720
+
+# Bootanimation Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_NAME := lineage_blossom
 PRODUCT_DEVICE := blossom
