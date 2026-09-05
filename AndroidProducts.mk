@@ -5,10 +5,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lessaosp_blossom.mk
+    $(LOCAL_DIR)/yaap_blossom.mk
 
 COMMON_LUNCH_CHOICES := \
-    lessaosp_blossom-user \
-    lessaosp_blossom-userdebug \
-    lessaosp_blossom-eng
+    yaap_blossom-user \
+    yaap_blossom-userdebug \
+    yaap_blossom-eng
 
