@@ -28,7 +28,7 @@ TARGET_ENABLE_BLUR := true
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := lessaosp_blossom
+PRODUCT_NAME := yaap_blossom
 PRODUCT_DEVICE := blossom
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
