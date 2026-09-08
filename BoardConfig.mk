@@ -8,16 +8,20 @@ BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/blossom
 
-# OTA
-TARGET_OTA_ASSERT_DEVICE := dandelion,angelica,angelican,cattail,angelicain,blossom
-AB_OTA_UPDATER := false
-
-# Build
-SELINUX_IGNORE_NEVERALLOWS := true
+# i am building with local manifest so
+BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+ALLOW_MISSING_DEPENDENCIES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
+
+# OTA
+TARGET_OTA_ASSERT_DEVICE := dandelion,angelica,angelican,cattail,angelicain,blossom
+AB_OTA_UPDATER := false
+
 
 # Architecture
 TARGET_ARCH := arm64
