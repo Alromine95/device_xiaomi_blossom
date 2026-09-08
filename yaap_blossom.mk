@@ -18,10 +18,6 @@ $(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 # Malloc
 PRODUCT_DISABLE_SCUDO := true
 
-# Maintainer Name
-ORION_MAINTAINER := Qbhi
-
-
 # Enable/Disable Blur
 TARGET_ENABLE_BLUR := true
 
@@ -45,3 +41,5 @@ PRODUCT_NO_CAMERA := true
 TARGET_EXCLUDES_AUDIOFX := true
 TARGET_INCLUDE_VIA := false
 TARGET_INCLUDE_REVAMPED := false
+
+
