@@ -31,6 +31,13 @@ PRODUCT_BRAND := Redmi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+
+#Overwrite build fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="blossom-user 16 BP4A.260105.004.E1 14587043 release-keys" \
+    BuildFingerprint=xiaomi/blossom/blossom:16/BP4A.260105.004.E1/14587043:user/release-keys \
+    DeviceProduct=xiaomi
+
 #Quicktap
 TARGET_SUPPORTS_QUICK_TAP := true
 
@@ -41,5 +48,6 @@ PRODUCT_NO_CAMERA := true
 TARGET_EXCLUDES_AUDIOFX := true
 TARGET_INCLUDE_VIA := false
 TARGET_INCLUDE_REVAMPED := false
+
 
 
