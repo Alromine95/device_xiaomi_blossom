@@ -21,6 +21,8 @@ PRODUCT_DISABLE_SCUDO := true
 # Enable/Disable Blur
 TARGET_ENABLE_BLUR := true
 
+export TARGET_BUILD_GAPPS=false
+
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
