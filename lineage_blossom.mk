@@ -13,13 +13,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 $(call inherit-product, device/xiaomi/blossom/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Malloc
 PRODUCT_DISABLE_SCUDO := true
-
-# Maintainer Name
-ORION_MAINTAINER := Qbhi
 
 
 # Enable/Disable Blur
@@ -28,7 +25,7 @@ TARGET_ENABLE_BLUR := true
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := yaap_blossom
+PRODUCT_NAME := lineage_blossom
 PRODUCT_DEVICE := blossom
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
