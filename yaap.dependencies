@@ -1,0 +1,22 @@
+[
+{
+"repository": "HaiKito18/vendor_xiaomi_miuicamera",
+"target_path": "vendor/xiaomi/miuicamera",
+"branch": "main"
+},
+{
+"repository": "haikito18/proprietary_vendor_xiaomi_blossom",
+"target_path": "vendor/xiaomi/blossom",
+"branch": "A16-qpr2"
+},
+{
+"repository": "Iam-nishan/jujutsu-kernel",
+"target_path": "device/xiaomi/blossom-kernel",
+"branch": "V5"
+},
+{
+"repository": "haikito18/android_hardware_mediatek",
+"target_path": "hardware/mediatek",
+"branch": "lineage-23.2"
+}
+]
