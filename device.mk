@@ -535,7 +535,7 @@ PRODUCT_PACKAGES += \
     WifiResOverlayBlossom
 
 # Inherit the proprietary files
-#$(call inherit-product, vendor/xiaomi/blossom/blossom-vendor.mk)
+$(call inherit-product, vendor/xiaomi/blossom/blossom-vendor.mk)
 
 #Miui
 #$(call inherit-product, vendor/xiaomi/miuicamera/MiuiCamera.mk)
