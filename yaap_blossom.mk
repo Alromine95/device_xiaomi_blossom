@@ -43,8 +43,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 #Quicktap
 TARGET_SUPPORTS_QUICK_TAP := true
 
-#Nuke Aperture
-PRODUCT_NO_CAMERA := true
 
 #Nerver complie this
 TARGET_EXCLUDES_AUDIOFX := true
