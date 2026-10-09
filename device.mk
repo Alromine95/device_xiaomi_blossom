@@ -534,11 +534,7 @@ PRODUCT_PACKAGES += \
     TelephonyOverlayBlossom \
     WifiResOverlayBlossom
 
-# Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/blossom/blossom-vendor.mk)
 
-#Miui
-$(call inherit-product, vendor/xiaomi/miuicamera/MiuiCamera.mk)
 
 #Dolby
 $(call inherit-product-if-exists, hardware/dolby/dolby.mk)
