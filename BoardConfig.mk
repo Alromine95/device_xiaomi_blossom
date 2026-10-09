@@ -216,4 +216,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 include vendor/xiaomi/blossom/BoardConfigVendor.mk
 
 #Miui
-include vendor/xiaomi/miuicamera/SEPolicy.mk
+#include vendor/xiaomi/miuicamera/SEPolicy.mk
