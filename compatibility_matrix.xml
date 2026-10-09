@@ -23,9 +23,4 @@
         <name>android.frameworks.schedulerservice</name>
         <version>1.0</version>
     </hal>
-    <hal format="hidl">
-    <name>android.hardware.memtrack</name>
-    <transport>hwbinder</transport>
-    <fqname>@1.0::IMemtrack/default</fqname>
-</hal>
 </compatibility-matrix>
