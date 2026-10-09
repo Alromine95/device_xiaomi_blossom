@@ -17,7 +17,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
 # Properties
-include $(LOCAL_PATH)/vendor_logtag.mk
+include $(DEVICE_PATH)/vendor_logtag.mk
 
 # Shipping API Level
 PRODUCT_SHIPPING_API_LEVEL := 29
