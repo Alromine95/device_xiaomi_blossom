@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 $(call inherit-product, device/xiaomi/blossom/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+$(call inherit-product, vendor/ascp/config/common_full_phone.mk)
 
 # Malloc
 PRODUCT_DISABLE_SCUDO := true
@@ -26,7 +26,13 @@ TARGET_BUILD_GAPPS=false
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := yaap_blossom
+# ASCP Configuration Flags
+ASCP_MAINTAINER := Qbhi
+WITH_REVANCED := false
+ASCP_OFFICIAL := false
+PERF_ANIM_OVERRIDE := true
+
+PRODUCT_NAME := ascp_blossom
 PRODUCT_DEVICE := blossom
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
