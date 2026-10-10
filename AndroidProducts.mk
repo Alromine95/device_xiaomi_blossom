@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/yaap_blossom.mk
+    $(LOCAL_DIR)/ascp_blossom.mk
 
 COMMON_LUNCH_CHOICES := \
-    yaap_blossom-user \
-    yaap_blossom-userdebug \
-    yaap_blossom-eng
+    ascp_blossom-user \
+    ascp_blossom-userdebug \
+    ascp_blossom-eng
