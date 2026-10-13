@@ -32,7 +32,7 @@ WITH_REVANCED := false
 ASCP_OFFICIAL := false
 PERF_ANIM_OVERRIDE := true
 
-PRODUCT_NAME := custom_blossom
+PRODUCT_NAME := ascp_blossom
 PRODUCT_DEVICE := blossom
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
