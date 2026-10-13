@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/custom_blossom.mk
+    $(LOCAL_DIR)/ascp_blossom.mk
 
 COMMON_LUNCH_CHOICES := \
-    custom_blossom-user \
-    custom_blossom-userdebug \
-    custom_blossom-eng
+    ascp_blossom-user \
+    ascp_blossom-userdebug \
+    ascp_blossom-eng
