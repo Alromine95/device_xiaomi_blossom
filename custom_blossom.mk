@@ -12,8 +12,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/xiaomi/blossom/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/ascp/config/common_full_phone.mk)
+# Inherit some common Ascp stuff.
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
 # Malloc
 PRODUCT_DISABLE_SCUDO := true
@@ -32,7 +32,7 @@ WITH_REVANCED := false
 ASCP_OFFICIAL := false
 PERF_ANIM_OVERRIDE := true
 
-PRODUCT_NAME := ascp_blossom
+PRODUCT_NAME := custom_blossom
 PRODUCT_DEVICE := blossom
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
