@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/ascp_blossom.mk
+    $(LOCAL_DIR)/voltage_blossom.mk
 
 COMMON_LUNCH_CHOICES := \
-    ascp_blossom-user \
-    ascp_blossom-userdebug \
-    ascp_blossom-eng
+    voltage_blossom-user \
+    voltage_blossom-userdebug \
+    voltage_blossom-eng
