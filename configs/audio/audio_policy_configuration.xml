@@ -251,11 +251,11 @@
                 <route type="mix" sink="fast input"
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,AUX Digital In,USB Primary In"/>
                 <route type="mix" sink="Speaker" 
-                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In,immersive_out"/>
+                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In"/>
                 <route type="mix" sink="Wired Headset" 
-                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In,immersive_out"/>
+                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In"/>
                 <route type="mix" sink="Wired Headphones" 
-                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In,immersive_out"/>
+                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In"/>
             </routes>
 
         </module>
